@@ -26,3 +26,5 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+https://api.elephantsql.com/console/8066f60c-950d-42a1-bb35-4355bedbd13d/details
