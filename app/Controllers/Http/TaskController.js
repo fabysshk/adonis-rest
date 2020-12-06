@@ -34,6 +34,15 @@ class TaskController {
     return task;
   }
 
+  async find({ auth, params }) {
+    const user = await auth.getUser();
+    const { id } = params;
+    const task = await Task.find(id);
+    const project = await task.project().fetch();
+    AuthorizationService.verifyPermision(project, user);
+    return task;
+  }
+
   async update({ auth, params, request }) {
     const user = await auth.getUser();
     const { id } = params;
