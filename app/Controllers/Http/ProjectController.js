@@ -35,6 +35,14 @@ class ProjectController {
     await project.save();
     return project;
   }
+
+  async find({ auth, params, request }) {
+    const user = await auth.getUser();
+    const { id } = params;
+    const project = await Project.find(id);
+    AuthorizationService.verifyPermision(project, user);
+    return project;
+  }
 }
 
 module.exports = ProjectController;
