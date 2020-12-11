@@ -41,4 +41,9 @@ Route.group(() => {
   Route.delete("/tasks/:id", "TaskController.destroy").middleware("auth");
   Route.get("/tasks/:id", "TaskController.find").middleware("auth");
   Route.patch("/tasks/:id", "TaskController.update").middleware("auth");
+
+  Route.get("/musics", "MusicController.index");
+  Route.post("/musics", "MusicController.create").middleware("auth");
+  Route.get("/musics/me", "MusicController.me").middleware("auth");
+  Route.delete("/musics/:id", "MusicController.destroy").middleware("auth");
 }).prefix("api/v0");

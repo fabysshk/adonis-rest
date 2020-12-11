@@ -21,6 +21,9 @@ class User extends Model {
   projects() {
     return this.hasMany("App/Models/Project");
   }
+  musics() {
+    return this.hasMany("App/Models/Music");
+  }
 }
 
 module.exports = User;

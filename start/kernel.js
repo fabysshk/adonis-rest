@@ -12,10 +12,7 @@ const namedMiddleware = {
   guest: "Adonis/Middleware/AllowGuestOnly",
 };
 
-const serverMiddleware = [
-  // 'Adonis/Middleware/Static',
-  "Adonis/Middleware/Cors",
-];
+const serverMiddleware = ["Adonis/Middleware/Static", "Adonis/Middleware/Cors"];
 
 Server.registerGlobal(globalMiddleware)
   .registerNamed(namedMiddleware)
