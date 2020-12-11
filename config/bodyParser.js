@@ -19,7 +19,7 @@ module.exports = {
   },
   files: {
     types: ["multipart/form-data"],
-    maxSize: "40mb",
+    maxSize: "20mb",
     autoProcess: true,
     processManually: [],
   },
